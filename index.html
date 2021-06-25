@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Video Poker :)</title>
+    <script src="java/script.js" defer></script>
+</head>
+<body>
+    <header class="block">
+        <div id="vPoker-title"></div>
+        <div id="payout"></div>
+    </header>
+    
+    <main class="playarea-grid-container">
+        <div id='winning-msg'></div>
+            <div class="card-grid-container">
+                <span>
+                    <span class="block" id='hold1'></span>
+                    <button class='hold-btn' id='card1'></button>
+                </span>
+                <span>
+                    <span class="block" id='hold2'></span>
+                    <button class='hold-btn' id='card2'></button>
+                </span>
+                <span>
+                    <span class="block" id='hold3'></span>
+                    <button class='hold-btn' id='card3'></button>
+                </span>
+                <span>
+                    <span class="block" id='hold4'></span>
+                    <button class='hold-btn' id='card4'></button>
+                </span>
+                <span>
+                    <span class="block" id='hold5'></span>
+                    <button class='hold-btn' id='card5'></button>
+                </span>
+            </div>
+    </main>
+    <footer class="flex-ct">
+        <div id='coinBalance'></div>
+        <div><button><div id='betting'></div></button></div>
+        <div id='earnings'></div>
+        <div><button id='stand-button'></button></div>
+        <div><button id='trade-button'></button></div>
+        <div id='buttons'><button id='deal-button'></button></div>
+    </footer>
+</body>
+</html>
