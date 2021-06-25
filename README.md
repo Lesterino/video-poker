@@ -3,6 +3,7 @@
 Casino game based on five-card draw poker. A player is dealt a five-card hand from a shuffled deck and can choose to either keep the initial five-cards or 
 trade some or all of their cards to create a winning hand.
 
+<<<<<<< HEAD
 <img src="https://i.imgur.com/yWYTrV0.png"/>
 <img src="https://i.imgur.com/fLa2TZd.png"/>
 <img src="https://i.imgur.com/vLE3CDo.png"/>
@@ -10,6 +11,15 @@ trade some or all of their cards to create a winning hand.
 Technologies Used: JS, HTML, CSS
 
 [Link to game](http://lesterine.github.io/video-poker)
+=======
+<img src="https://i.imgur.com/yWYTrV0.png" width='1024' height='576'/>
+<img src="https://i.imgur.com/fLa2TZd.png" width='1024' height='576'/>
+<img src="https://i.imgur.com/vLE3CDo.png" width='1024' height='576'/>
+
+Technologies Used: JS, HTML, CSS
+
+[Link to game](https://lesterine.github.io/video-poker/)
+>>>>>>> 908a0aadd345c66f07585e6bd06cb4fdd1139703
 
 Things to add:
 
