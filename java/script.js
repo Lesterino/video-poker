@@ -12,6 +12,8 @@ let coinBet = 1;
 let multiplier = 0;
 let deckTracker = 0;
 
+let validMove = false;
+
 // cached element references
 const earnings = document.getElementById('earnings');
 const betAmt = document.getElementById('betting');
@@ -56,8 +58,8 @@ const initCoins = () => {
     coinBalance = 50;
     dealBtn.addEventListener('click', deal);
     betAmt.addEventListener('click', addBet);
-    stand.addEventListener('click', checkHand);
-    trade.addEventListener('click', tradeCards);
+    stand.addEventListener('click', standValid);
+    trade.addEventListener('click', tradeValid);
 };
 
 const initCards = () => {
@@ -171,8 +173,30 @@ const resetVars = () => { // function for resetting vars
     Object.keys(handConds).forEach(i => handConds[i] = false); // reset winConds
     multiplier = 0; // reset bet multiplier
     message = ''; // reset win message
+    validMove = true;
     initDeck();
 };
+
+const standValid = () => { // allows stand action if new cards are dealt
+    if (validMove === true) checkHand();
+    else {
+        message = 'Must deal new cards first!';
+        render();
+    }
+}
+
+const tradeValid = () => { // allows trade action if new cards are dealt
+    if (validMove === true) tradeCards();
+    else {
+        message = 'Must deal new cards first!';
+        render();
+    }
+};
+
+const betError = () => {
+    message = "Can't change bet amount if cards already dealt!";
+    render();
+}
 
 // object for hand conditions
 const handConds = {
@@ -267,6 +291,8 @@ const addBet = () => {
 };
 
 const deal = () => {
+    betAmt.removeEventListener('click', addBet);
+    betAmt.addEventListener('click', betError);
     resetVars();
     shuffleDeck();
     render();
@@ -355,6 +381,9 @@ const payOut = () => {
     }
     checkCoins();
     removeListeners();
+    validMove = false;
+    betAmt.removeEventListener('click', betError)
+    betAmt.addEventListener('click', addBet);
     render();
 };
 
