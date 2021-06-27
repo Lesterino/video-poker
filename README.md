@@ -10,7 +10,7 @@ trade some or all of their cards to create a winning hand.
 
 Technologies Used: JS, HTML, CSS
 
-[Link to game](http://lesterine.github.io/video-poker)
+[Link to game](https://pages.git.generalassemb.ly/lesterine/video-poker/)
 
 Things to add:
 
